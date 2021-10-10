@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Styles.css">
+
+    <title>Gotcha Application</title>
+</head>
+<body onload="IntroAnimation()" id="BodyTrans">
+    <div id="Content">
+        <div id="CaseLine"></div>
+        <h2>Case</h2>
+        <h1 >Ordatok.fo</h1>
+        <p>Personal project i have been working on for the past year, includes all historic Faroese sayings. Full responsive and mobile friendly</p>
+        <div id="BlackBox"></div>
+        <iframe id="WebsiteInnSide" src="/Ordatok-improved/index.html">
+        </iframe>
+    </div>
+
+    
+<div id="IntroContent">
+    <div id="DropDownMenu"> 
+        <ol>
+            <li><a href="#">Kompetencer</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">IDK</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ol>
+
+        <article>
+            <p>Tak fordi du kigger forbi! <br><br>
+
+                Det gør du sikkert, fordi du allerede har styr på dit personale – men ønsker en ulønnet praktikant. Bare rolig: Det er præcis derfor, jeg er her.
+            </p>
+            <section id="DropContact">
+            <address>
+                <span class="Darker"> Hjem <br><br></span>
+                Visionsvej 2 st 8 <br><br>
+                9000 Aalborg
+            </address>
+            <address>
+                <span class="Darker"> Kontakt <br><br></span>
+                00298218595 <br><br>
+                RuniGudmundarson@hotmail.com
+            </address>
+        </section>
+        </article>
+    </div>
+    <div id="TopSplit"></div>
+    <div id="BottomSplit"></div>
+    <h1 id="H1er">Rúni Gudmundarson</h1>
+    <div id="IntroLine"></div>
+    <div id="DropDownDown"></div>
+    <button id="DropDown" onclick="Dropdown()">
+        <div id="DropLineUp"></div>
+        <div id="DropLineDown"></div>
+    </button>
+    <button id="DropDownDown" onclick="DropdownUp()"></button>
+    
+</div>
+<div>
+    
+<a id="ASCVDownload" href="/Ansøgnign + CV.pdf" download>Hent Ansøgning og cv pdf!</a>
+<script src="/IntroAnimation.js"></script>
+</body>
+</html>

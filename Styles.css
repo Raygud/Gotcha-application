@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    transition: 500ms ease-in-out;
+    background-color: rgb(162,146,135);
+}
+
+#IntroContent{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+h1{
+    position: absolute;
+    font-family: 'Sora', sans-serif;
+    animation: Intr 2s infinite;
+    top: 43vh;
+    left: 5vw;
+    color: rgb(162,146,135);
+    animation: H1intro 4s forwards ;
+}
+
+#IntroLine{
+    position: absolute;
+    height: 2.5px;
+    top: 50vh;
+    background-color: rgb(162,146,135);
+}
+
+#TopSplit{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(43,43,42);
+}
+
+#BottomSplit{
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(43,43,42);
+    bottom: 0;
+}
+
+.SplitAnimation{
+    animation: IntroSplit 3s forwards ;
+}
+
+.IntroLineAnimation{
+    animation: IntroLine 3s forwards;
+}
+
+.H1MoveAnimation{
+    animation: H1Move 2.9s forwards ;
+}
+
+@keyframes H1intro{
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@keyframes IntroLine{
+    0% {width: 0vw;}
+    100% {width: 100vw;}
+}
+
+@keyframes IntroSplit{
+    0% {height: 50vh;}
+    100% {height: 0vh;}
+}
+
+@keyframes H1Move{
+    0% {top: 43vh;}
+    100% { top: 2vw;}
+    100% {color: black;}
+}
+
+#DropDown{
+    display: none;
+    border: none;
+    position: fixed;
+    right: 11vw;
+    top: 1vw;
+    width: 2.7vw;
+    height: 2.7vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: -0.3vw 0.1vw 0.5vw rgba(0, 0, 0, 0.103);
+    z-index: 1;
+}
+
+#DropDownDown{
+    border: none;
+    position: absolute;
+    right: 11vw;
+    top: 1vw;
+    width: 2.7vw;
+    height: 2.7vw;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: none;
+}
+
+#DropLineUp{
+    margin: auto;
+    width: 55%;
+    height: 3.5%;
+    background-color: black;
+}
+
+#DropLineDown{
+    margin: auto;
+    margin-top: 9%;
+    width: 55%;
+    height: 3.5%;
+    background-color: black;
+    transform-origin: center;
+    
+}
+
+.DropLineTooXUp{
+    animation: DropDownActiveUp 0.5s forwards;
+}
+
+.DropLineTooXDown{
+    animation: DropDownActiveDown 0.5s forwards;
+}
+
+.DropLineFromXUp{
+    animation: DropDownReverseUp 0.5s forwards;
+}
+
+.DropLineFromXDown{
+    animation: DropDownReverseDown 0.5s forwards;
+}
+
+@keyframes DropDownActiveUp{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(50deg);}
+}
+
+@keyframes DropDownActiveDown{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-50deg);}
+    100% {margin-top: -4%;}
+}
+
+@keyframes DropDownReverseUp{
+    0% {transform: rotate(50deg);}
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes DropDownReverseDown{
+    0% {transform: rotate(-50deg);}
+    100% {transform: rotate(0deg);}
+    100% {margin-top: 9%;}
+}
+
+#DropDownMenu{
+    position: fixed;
+    top: -100vw;
+    width: 100%;
+    height: 84%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -0.1vw 0.4vw 4vw rgba(0, 0, 0, 0.185);
+}
+
+.DropDownMenuDown{
+    animation: DropMenuDown 1s forwards;
+}
+
+.DropDownMenuUp{
+    animation: DropMenuUp 1s forwards;
+}
+
+@keyframes DropMenuDown{
+    0% {top: -100vw;}
+    100% {top: 0vw;}
+}
+
+@keyframes DropMenuUp{
+    0% {top: 0vw;}
+    100% {top: -100vw;}
+}
+
+#DropDownMenu > ol{
+    position: absolute;
+    top: 8vw;
+    left: 19vw;
+    font-family: 'Sora', sans-serif;
+    font-size: 2vw;
+    font-weight: 900;
+    color: rgb(43,43,42);
+}
+
+#DropDownMenu > ol > li{
+    padding-top: 1vw;
+}
+
+#DropDownMenu > ol > li > a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#DropDownMenu > article > p{
+    position: absolute;
+    text-align: left;
+    width: 33vw;
+    right: 18vw;
+    top: 8vw;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 300;
+    color: rgb(43,43,42);
+}
+
+#DropContact{
+    position: absolute;
+    right: 24.5vw;
+    top: 22vw;
+}
+
+#DropDownMenu > article > section > address{
+    display: inline-block;
+    text-align: left;
+    width: 13vw;
+    top: 23vw;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.8vw;
+    font-weight:300;
+    font-style: normal;   
+    color: rgb(112, 112, 112);
+}
+
+.Darker{
+    color: rgb(0, 0, 0);
+}
+
+#ASCVDownload{
+    position: absolute;
+    padding: 0 0.2vw 0 0.2vw;
+    bottom: 1vw;
+    right: 1vw;
+    font-family: 'Sora', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    width: 18vw;
+    font-size: 1.3vw;
+    font-weight: 300;
+    background-color: rgb(43,43,42);
+    color: white;
+    border-radius: 25px;
+    transition: 500ms ease-in-out;
+}
+
+#ASCVDownload:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(43,43,42);
+}
+
+#Content{
+    width: 100%;
+    height: 100%;
+}
+
+#Content > h2{
+    position: absolute;
+    font-family: 'Sora', sans-serif;
+    font-size: 1vw;
+    font-weight:400;
+    color: rgb(162,146,135);
+    top: 15vw;
+    left: 10vw;
+}
+#Content > h1{
+    position: absolute;
+    font-family: 'Sora', sans-serif;
+    font-size: 3vw;
+    font-weight:900;
+    color: rgb(27, 27, 27);
+    top: 17vw;
+    left: 10vw;
+}
+
+#Content > #CaseLine{
+    position: absolute;
+    width: 4vw;
+    height: 0.2vw;
+    background: rgb(41, 41, 41);
+    top: 18.8vw;
+    left: 5vw;
+    transition: ease-in-out;
+}
+
+
+@keyframes linedown{
+    from {top: 18.8vw;}
+    to {top: 20vw;}
+}
+
+@keyframes lineright{
+    from {left: 5vw;}
+    to {left: 10vw;}
+}
+
+@keyframes linesize{
+    from {width: 4vw;}
+    to {width: 15vw;}
+}
+
+iframe{
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 40vw;
+    height: 25vw;
+    right: 10vw;
+    top: 15vw;
+    transition: 1s ease-in-out;
+}
+
+#WebsiteInnSide:hover{
+    transform: scale(1.3);
+    right: 12vw;
+}
+
+#BlackBox{
+    position: absolute;
+    right: 0;
+    width: 0vw;
+    height: 100%;
+    background: rgb(59, 59, 59);
+    transition: 1s ease-in-out;
+}
+
+#Content > p{
+    position: absolute;
+    width: 30vw;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.5vw;
+    font-weight:600;
+    color: rgb(70, 70, 70);
+    top: 21vw;
+    left: 10vw;
+    text-shadow: 0.2vw 0.2vw 0.1vw rgba(0, 0, 0, 0.144);
+}
+
+
+
+
+
